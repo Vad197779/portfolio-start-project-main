@@ -23,7 +23,7 @@ const Photo = styled.img`
   height: 430px;
   object-fit: cover;
 `
-const StyledMain = styled.div`
+const StyledMain = styled.section`
   min-height: 100vh;
   background-color: #a9d0c7;
 `
