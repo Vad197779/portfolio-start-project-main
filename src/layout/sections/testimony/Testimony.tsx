@@ -21,7 +21,6 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-
   ${IconWrapper} {
     margin: 48px 0 72px;
   }
