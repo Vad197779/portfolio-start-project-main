@@ -30,6 +30,11 @@ export const Footer = () => {
               <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={"linkedin"}/>
             </SocialLink>
           </SocialItem>
+          <SocialItem>
+            <SocialLink>
+              <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={"linkedin"}/>
+            </SocialLink>
+          </SocialItem>
         </SocialList>
         <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
       </FlexContainer>
