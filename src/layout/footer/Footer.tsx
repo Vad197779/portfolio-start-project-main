@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import { Icon } from '../../components/icon/Icon';
 import { FlexContainer } from '../../components/FlexContainer';
 import { theme } from '../../styles/Theme';
+import { font } from '../../styles/Common';
 
 export const Footer = () => {
   return (
     <StyledFooter>
       <FlexContainer direction={"column"} align={"center"}>
-        <Name>Svetlana</Name>
+        <Name>Vadim</Name>
         <SocialList>
           <SocialItem>
             <SocialLink>
@@ -31,7 +32,7 @@ export const Footer = () => {
             </SocialLink>
           </SocialItem>
         </SocialList>
-        <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
+        <Copyright>© 2023 Vadim Kovtunenko, All Rights Reserved.</Copyright>
       </FlexContainer>
     </StyledFooter>
   );
@@ -42,9 +43,7 @@ const StyledFooter = styled.footer`
   padding: 40px 0;
 `
 const Name = styled.span`
-  font-family: Josefin Sans, sans-serif;
-  font-size: 22px;
-  font-weight: 700;
+  ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 22, Fmin: 16})}
   letter-spacing: 3px;
 `
 const SocialList = styled.ul`
