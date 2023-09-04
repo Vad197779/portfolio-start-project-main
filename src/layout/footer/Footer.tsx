@@ -1,78 +1,43 @@
 import React from 'react'
-import styled from 'styled-components';
 import { Icon } from '../../components/icon/Icon';
 import { FlexContainer } from '../../components/FlexContainer';
-import { theme } from '../../styles/Theme';
-import { font } from '../../styles/Common';
+import {S} from "./Footer_Styles"
 
-export const Footer = () => {
+const socialItemsData = [
+  {
+    iconId: "instagram",
+  },
+  {
+    iconId: "telegram",
+  },
+  {
+    iconId: "viber",
+  },
+  {
+    iconId: "whatsapp",
+  },
+]
+
+export const Footer: React.FC = () => {
   return (
-    <StyledFooter>
+    <S.Footer>
       <FlexContainer direction={"column"} align={"center"}>
-        <Name>Vadim</Name>
-        <SocialList>
-          <SocialItem>
-            <SocialLink>
-              <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={"instagram"}/>
-            </SocialLink>
-          </SocialItem>
-          <SocialItem>
-            <SocialLink>
-              <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={"telegram"}/>
-            </SocialLink>
-          </SocialItem>
-          <SocialItem>
-            <SocialLink>
-              <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={"viber"}/>
-            </SocialLink>
-          </SocialItem>
-          <SocialItem>
-            <SocialLink>
-              <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={"whatsapp"}/>
-            </SocialLink>
-          </SocialItem>
-        </SocialList>
-        <Copyright>© 2023 Vadim Kovtunenko, All Rights Reserved.</Copyright>
+        <S.Name>Vadim</S.Name>
+        <S.SocialList>
+
+          {socialItemsData.map((s, index) => {
+            return(
+              <S.SocialItem key={index}>
+                <S.SocialLink>
+                  <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={s.iconId}/>
+                </S.SocialLink>
+              </S.SocialItem>
+            )
+          })}
+          
+        </S.SocialList>
+        <S.Copyright>© 2023 Vadim Kovtunenko, All Rights Reserved.</S.Copyright>
       </FlexContainer>
-    </StyledFooter>
+    </S.Footer>
   );
 };
-
-const StyledFooter = styled.footer`
-  background-color: ${theme.colors.primaryBg};
-  padding: 40px 0;
-`
-const Name = styled.span`
-  ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 22, Fmin: 16})}
-  letter-spacing: 3px;
-`
-const SocialList = styled.ul`
-  display: flex;
-  gap: 20px;
-  margin: 30px 0;
-`
-const SocialItem = styled.li`
-  
-`
-const SocialLink = styled.a`
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.10);
-  width: 35px;
-  height: 35px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: ${theme.colors.accent};
-
-  &:hover {
-    color: ${theme.colors.primaryBg};
-    transform: translateY(-4px);
-  }
-`
-const Copyright = styled.small`
-  font-size: 12px;
-  font-weight: 400;
-  opacity: 0.5;
-`
