@@ -5,6 +5,7 @@ import { Link } from "../../../components/Link";
 import { FlexContainer } from "../../../components/FlexContainer";
 
 const Works = styled.section`
+  position: relative;
   ${FlexContainer} {
     gap: 30px;
   }
