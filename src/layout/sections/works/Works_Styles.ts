@@ -12,8 +12,8 @@ const Works = styled.section`
 `
 const Work = styled.div`
   background-color: ${theme.colors.secondaryBg};
-  width: 330px;
-  flex-grow: 1;
+  /* width: 330px;
+  flex-grow: 1; */
 
   ${Link} {
     padding: 10px 0;
@@ -22,9 +22,9 @@ const Work = styled.div`
     }
   }
 
-  @media ${theme.media.desktop} {
+  /* @media ${theme.media.desktop} {
     max-width: 540px;
-  }
+  } */
 `
 const ImageWrapper = styled.div`
   position: relative;
@@ -32,8 +32,9 @@ const ImageWrapper = styled.div`
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     opacity: 0;
+    transition: ${theme.animations.transition};
 
     &::before {
       width: 100%;
@@ -49,8 +50,9 @@ const ImageWrapper = styled.div`
       top: 0;
       bottom: 0;
       background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(2px);
       opacity: 0;
+      transition: ${theme.animations.transition};
     }
 
   &:hover {
@@ -60,6 +62,7 @@ const ImageWrapper = styled.div`
     
     ${Button} {
       opacity: 1;
+      transform: translate(-50%, -50%);
     }
   }
 
