@@ -12,7 +12,7 @@ const Works = styled.section`
 `
 const Work = styled.div`
   background-color: ${theme.colors.secondaryBg};
-  /* width: 330px;
+    /* width: 330px;
   flex-grow: 1; */
 
   ${Link} {

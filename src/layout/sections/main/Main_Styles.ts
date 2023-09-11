@@ -25,6 +25,10 @@ const PhotoWrapper = styled.div`
     }
   }
 
+  @media ${theme.media.desktop2} {
+    margin-top: 65px;
+  }
+
   @media ${theme.media.mobile} {
     margin-top: 65px;
   }
@@ -45,6 +49,7 @@ const Main = styled.section`
   min-height: 100vh;
   background-color: #a9d0c7;
   display: flex;
+  padding: 90px;
 `
 const MainTitle = styled.h1`
   ${font({weight: 400, Fmax: 27, Fmin: 20})}

@@ -78,7 +78,7 @@ export const Works: React.FC = () => {
           {filteredWorks.map((w) => {
               return (
                 <motion.div 
-                  style={{flexGrow: 1, width: "330px", maxWidth: "540px"}}
+                  style={{flexGrow: 1, width: "330px", maxWidth: "540px", margin: "0 auto"}}
                   layout
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
